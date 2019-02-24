@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		847B39D32221EAD90043317C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B39D22221EAD90043317C /* AppDelegate.swift */; };
-		847B39D52221EAD90043317C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B39D42221EAD90043317C /* ViewController.swift */; };
+		847B39D52221EAD90043317C /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B39D42221EAD90043317C /* ToDoListViewController.swift */; };
 		847B39D82221EAD90043317C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B39D62221EAD90043317C /* Main.storyboard */; };
 		847B39DA2221EADB0043317C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847B39D92221EADB0043317C /* Assets.xcassets */; };
 		847B39DD2221EADB0043317C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B39DB2221EADB0043317C /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		847B39CF2221EAD90043317C /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847B39D22221EAD90043317C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		847B39D42221EAD90043317C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		847B39D42221EAD90043317C /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		847B39D72221EAD90043317C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		847B39D92221EADB0043317C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847B39DC2221EADB0043317C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				847B39D22221EAD90043317C /* AppDelegate.swift */,
-				847B39D42221EAD90043317C /* ViewController.swift */,
+				847B39D42221EAD90043317C /* ToDoListViewController.swift */,
 				847B39D62221EAD90043317C /* Main.storyboard */,
 				847B39D92221EADB0043317C /* Assets.xcassets */,
 				847B39DB2221EADB0043317C /* LaunchScreen.storyboard */,
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847B39D52221EAD90043317C /* ViewController.swift in Sources */,
+				847B39D52221EAD90043317C /* ToDoListViewController.swift in Sources */,
 				847B39D32221EAD90043317C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,13 +433,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X3DN5WU7CG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ToDoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.safem.Teamz.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.safem.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,13 +451,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X3DN5WU7CG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ToDoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.safem.Teamz.ToDoList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.safem.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
