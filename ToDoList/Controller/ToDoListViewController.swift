@@ -14,6 +14,7 @@ class ToDoListViewController: UITableViewController {
     var selectedCategory : Category? {
         didSet{
             loadItems()
+            
         }
     }
     

@@ -8,9 +8,11 @@
 
 import UIKit
 import CoreData
+import RealmSwift
+
 class CategoryViewController: UITableViewController {
     
-   
+    let realm = try! Realm()
     
     var categoryArray = [Category]()
   
