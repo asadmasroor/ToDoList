@@ -14,7 +14,8 @@ class CategoryViewController: UITableViewController {
     
     let realm = try! Realm()
     
-    var categoryArray = [Category]()
+    var categoryArray: Results<Category>?
+    
   
    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -31,7 +32,7 @@ class CategoryViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "toDoCategory", for: indexPath)
         
-        cell.textLabel?.text = categoryArray[indexPath.row].name
+        cell.textLabel?.text = categoryArray?[indexPath.row].name ?? "No Categories Added"
         
         return cell
         
@@ -39,7 +40,7 @@ class CategoryViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return categoryArray.count
+        return categoryArray?.count ?? 1
     }
     
     
@@ -56,7 +57,7 @@ class CategoryViewController: UITableViewController {
         let destinationVC = segue.destination as! ToDoListViewController
         
         if let indexpath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedCategory = categoryArray[indexpath.row]
+            destinationVC.selectedCategory = categoryArray?[indexpath.row]
         }
         
     }
@@ -70,13 +71,13 @@ class CategoryViewController: UITableViewController {
         
         let action = UIAlertAction(title: "Add", style: .default) { (UIAlertAction) in
             
-            let newCategory = Category(context: self.context)
+            let newCategory = Category()
             
-            newCategory.name = textfield.text
+            newCategory.name = textfield.text!
             
-            self.categoryArray.append(newCategory)
+        
             
-            self.saveCategory()
+            self.saveCategory(category: newCategory)
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (UIAlertAction) in
@@ -98,10 +99,12 @@ class CategoryViewController: UITableViewController {
     //MARK - SAVING AND LOADING METHODS
     
     
-    func saveCategory() {
+    func saveCategory(category: Category) {
         
         do {
-            try context.save()
+            try realm.write {
+               realm.add(category)
+            }
         } catch {
             print("Error from saving categories \(error)")
         }
@@ -111,13 +114,8 @@ class CategoryViewController: UITableViewController {
     }
     
     
-    func loadCategory(with request: NSFetchRequest<Category> = Category.fetchRequest() ) {
-        do {
-            categoryArray = try context.fetch(request)
-        } catch {
-            print("Error loading categories \(error)")
-        }
-        
+    func loadCategory() {
+        categoryArray = realm.objects(Category.self)
         tableView.reloadData()
     }
     

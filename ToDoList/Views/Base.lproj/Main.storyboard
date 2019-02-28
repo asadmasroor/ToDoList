@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="71.014492753623188" y="-664.4021739130435"/>
         </scene>
-        <!--ToDoList-->
+        <!--Categories-->
         <scene sceneID="Ogs-7i-yVh">
             <objects>
                 <tableViewController id="8wN-XX-qQX" customClass="CategoryViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +99,7 @@
                             <outlet property="delegate" destination="8wN-XX-qQX" id="0fB-B0-Ev1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDoList" id="3Ec-gk-PDt">
+                    <navigationItem key="navigationItem" title="Categories" id="3Ec-gk-PDt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OGf-Le-U6E">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
